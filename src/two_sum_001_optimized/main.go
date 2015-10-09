@@ -15,7 +15,7 @@ func TwoSum(array []int, target int) ([2]int, error) {
 
 	for i, v := range array {
 		
-		search_map[v]=i
+		search_map[v]=i + 1
 
 	}
 	
@@ -25,11 +25,11 @@ func TwoSum(array []int, target int) ([2]int, error) {
 		if another_v, ok := search_map[another_k]; ok {
 			
 			if (another_v > v){
-				indexes[0] = v +1
-				indexes[1] = another_v +1
+				indexes[0] = v
+				indexes[1] = another_v
 			}else{
-				indexes[0] = another_v +1
-				indexes[1] = v +1
+				indexes[0] = another_v 
+				indexes[1] = v 
 			}
 			found = true
 			break

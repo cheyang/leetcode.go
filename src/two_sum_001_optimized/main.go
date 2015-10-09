@@ -1,28 +1,42 @@
-package two_sum_001
+package two_sum_001_optimzed
 
 import (
 	"errors"
 	"strconv"
 )
 
-//O(2n)
 func TwoSum(array []int, target int) ([2]int, error) {
 
 	indexes := [2]int{-1, -1}
 
 	found := false
+	
+	search_map := make(map[int]int, len(array))
 
 	for i, v := range array {
-		search_v := target - v
+		
+		search_map[v]=i
 
-		if pos, e := contain(array, search_v); e == nil {
-			indexes[0] = i + 1
-			indexes[1] = pos + 1
+	}
+	
+	for k, v := range search_map{
+		another_k := target - k
+		
+		if another_v, ok := search_map[another_k]; ok {
+			
+			if (another_v > v){
+				indexes[0] = v +1
+				indexes[1] = another_v +1
+			}else{
+				indexes[0] = another_v +1
+				indexes[1] = v +1
+			}
 			found = true
 			break
 		}
-
+		
 	}
+	
 
 	if found {
 		return indexes, nil

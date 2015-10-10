@@ -14,7 +14,7 @@ func TestlengthOfLongestSubstring1(t *testing.T) {
 				
 			})
 		
-	}
+	
 }
 
 func TestlengthOfLongestSubstring2(t *testing.T) {
@@ -26,6 +26,6 @@ func TestlengthOfLongestSubstring2(t *testing.T) {
 				
 			})
 		
-	}
+	
 }
 

@@ -1,5 +1,9 @@
 package add_two_numbers_002
 
+import (
+	"fmt"
+)
+
 type linkedNode struct {
 	value int
 	next *linkedNode
@@ -7,6 +11,19 @@ type linkedNode struct {
 
 type linkedList struct{
 	first *linkedNode
+}
+
+func (l *linkedList) printList(){
+	
+	node := l.first
+	
+	for node != nil {
+		fmt.Println(node)
+		
+		node = node.next
+	}
+	
+	fmt.Println("=============================")
 }
 
 

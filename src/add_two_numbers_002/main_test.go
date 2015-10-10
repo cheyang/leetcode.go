@@ -7,6 +7,41 @@ import (
 )
 
 func Test_AddTwoNumbers(t *testing.T) {
+	ln1 := &linkedNode{
+			value: 2,
+			next: &linkedNode{
+				value: 4,
+				next: &linkedNode{
+					value: 3,
+				},
+			},
+		}
+		
+		l1 := linkedList{first: ln1}
+		
+		l1.printList()
+		
+		ln2 := &linkedNode{
+			value: 5,
+			next: &linkedNode{
+				value: 6,
+				next: &linkedNode{
+					value: 4,
+				},
+			},
+		}
+		
+		l2 := linkedList{first: ln2}
+		
+		l2.printList
+		
+		list := AddTwoNumbers(l1, l2)
+		
+		list.printList
+}
+
+/**
+func Test_AddTwoNumbers(t *testing.T) {
 	Convey("Add two numbers", t, func() {
 		ln1 := &linkedNode{
 			value: 2,
@@ -46,3 +81,4 @@ func Test_AddTwoNumbers(t *testing.T) {
 		So(node.next, ShouldBeNil)
 	})
 }
+*/

@@ -12,10 +12,10 @@ type linkedList struct{
 
 func AddTwoNumbers (listA, listB linkedList) linkedList{
 	
-	var listC linkedList = LinkedList{&LinkedNode(-1, nil)}
+	var listC linkedList = LinkedList{&LinkedNode{-1, nil}}
 	
 	// the pointer for list C
-	var currentC *linkedList = listC.first
+	var currentC *linkedNode = listC.first
 	
 	nodeA := listA.first
 	

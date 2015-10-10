@@ -9,11 +9,11 @@ import (
 func Test_AddTwoNumbers(t *testing.T) {
 	Convey("Add two numbers", t, func() {
 		ln1 := &linkedNode{
-			Value: 2,
-			Next: &linkedNode{
-				Value: 4,
-				Next: &linkedNode{
-					Value: 3,
+			value: 2,
+			next: &linkedNode{
+				value: 4,
+				next: &linkedNode{
+					value: 3,
 				},
 			},
 		}
@@ -21,11 +21,11 @@ func Test_AddTwoNumbers(t *testing.T) {
 		l1 := LinkedList{first: ln1}
 		
 		ln2 := &linkedNode{
-			Value: 5,
-			Next: &linkedNode{
-				Value: 6,
-				Next: &linkedNode{
-					Value: 4,
+			value: 5,
+			next: &linkedNode{
+				value: 6,
+				next: &linkedNode{
+					value: 4,
 				},
 			},
 		}
@@ -36,13 +36,13 @@ func Test_AddTwoNumbers(t *testing.T) {
 		
 		node = list.first
 		
-		So(node.Value, ShouldEqual, 7)
-		So(node.Next, ShouldNotBeNil)
-		node = node.Next
-		So(node.Value, ShouldEqual, 0)
-		So(node.Next, ShouldNotBeNil)
-		node = node.Next
-		So(node.Value, ShouldEqual, 8)
-		So(node.Next, ShouldBeNil)
+		So(node.value, ShouldEqual, 7)
+		So(node.next, ShouldNotBeNil)
+		node = node.next
+		So(node.value, ShouldEqual, 0)
+		So(node.next, ShouldNotBeNil)
+		node = node.next
+		So(node.value, ShouldEqual, 8)
+		So(node.next, ShouldBeNil)
 	})
 }

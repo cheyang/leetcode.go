@@ -59,7 +59,7 @@ func lengthOfLongestSubstring(str string) (longestStrs []string, longestLength i
 	
 	for i, longestSubstring := range longestSubstringSlice{
 		
-		tempStr := string(longestSubstringSlice[longestSubstring.start:longestSubstring.end+1])
+		tempStr := string(strSlice[longestSubstring.start:longestSubstring.end+1])
 		
 		if v, ok := encountered[tempStr]; ok == false{
 			longestStrs = append(longestStrs, tempStr)

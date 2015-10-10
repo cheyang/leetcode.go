@@ -49,7 +49,7 @@ func lengthOfLongestSubstring(str string) (longestStrs []string, longestLength i
 
 			word_map[k] = v
 
-			endPos += 1
+			endPos = i
 
 		}
 
@@ -57,11 +57,11 @@ func lengthOfLongestSubstring(str string) (longestStrs []string, longestLength i
 	
 	encountered := map[string]bool{}
 	
-	for i, longestSubstring := range longestSubstringSlice{
+	for _, longestSubstring := range longestSubstringSlice{
 		
 		tempStr := string(strSlice[longestSubstring.start:longestSubstring.end+1])
 		
-		if v, ok := encountered[tempStr]; ok == false{
+		if _, ok := encountered[tempStr]; ok == false{
 			longestStrs = append(longestStrs, tempStr)
 			encountered[tempStr] = true
 		}

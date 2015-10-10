@@ -1,4 +1,4 @@
-package leetcode
+package add_two_numbers_002
 
 import (
 	"testing"
@@ -8,25 +8,34 @@ import (
 
 func Test_AddTwoNumbers(t *testing.T) {
 	Convey("Add two numbers", t, func() {
-		l1 := &ListNode{
+		ln1 := &linkedNode{
 			Value: 2,
-			Next: &ListNode{
+			Next: &linkedNode{
 				Value: 4,
-				Next: &ListNode{
+				Next: &linkedNode{
 					Value: 3,
 				},
 			},
 		}
-		l2 := &ListNode{
+		
+		l1 := LinkedList{first: ln1}
+		
+		ln2 := &linkedNode{
 			Value: 5,
-			Next: &ListNode{
+			Next: &linkedNode{
 				Value: 6,
-				Next: &ListNode{
+				Next: &linkedNode{
 					Value: 4,
 				},
 			},
 		}
-		node := AddTwoNumbers(l1, l2)
+		
+		l2 := LinkedList{first: ln2}
+		
+		list := AddTwoNumbers(l1, l2)
+		
+		node = list.first
+		
 		So(node.Value, ShouldEqual, 7)
 		So(node.Next, ShouldNotBeNil)
 		node = node.Next

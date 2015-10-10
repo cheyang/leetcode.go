@@ -2,19 +2,22 @@ package two_sum_001_optimzed
 
 import (
 	"testing"
-	"fmt"
+	. "github.com/smartystreets/goconvey/convey"
 )
+
 
 func Test_TwoSum(t *testing.T) {
 	
-	if	idxs,e := TwoSum([]int{2, 7, 11, 15}, 9); e != nil{
-		t.Errorf("twoSum failed due to not found")
-	}else{
+	Convey("Add Two Sum", t , func(){
+			
+			if	idxs,e := TwoSum([]int{2, 7, 11, 15}, 9); e != nil{
+				So(e, ShouldBeNil)
+				So(idxs[0], ShouldEqual, 1)
+				So(idx[1], ShouldEqual, 2)
+				}
+			
+			})
 		
-		fmt.Println(idxs)
-		if idxs != [2]int{1,2}{
-			t.Errorf("twoSum is found, not exact. ")
-		}
 	}
 		
 }

@@ -9,7 +9,7 @@ type LongSubstring struct {
 //https://leetcode.com/problems/longest-substring-without-repeating-characters/
 func lengthOfLongestSubstring(str string) (longestStrs []string, longestLength int) {
 	
-	longestStrs = make(string[], 1, len(str))
+	longestStrs = make([]string, 1, len(str))
 
 	// key is byte, value is last pos during iterate
 	word_map := make(map[byte]int, len(str))

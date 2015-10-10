@@ -5,6 +5,9 @@ import (
 	"strconv"
 )
 
+
+// https://leetcode.com/problems/two-sum/
+// O(n)
 func TwoSum(array []int, target int) ([2]int, error) {
 
 	indexes := [2]int{-1, -1}

@@ -28,6 +28,7 @@ func (l *linkedList) printList() {
 	return
 }
 
+// https://leetcode.com/problems/add-two-numbers/
 func AddTwoNumbers(listA, listB linkedList) linkedList {
 
 	var listC linkedList = linkedList{&linkedNode{-1, nil}}

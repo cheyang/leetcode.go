@@ -3,7 +3,7 @@ package add_two_numbers_002
 import (
 	"testing"
 
-	. "github.com/smartystreets/goconvey/convey"
+//	. "github.com/smartystreets/goconvey/convey"
 )
 
 func Test_AddTwoNumbers(t *testing.T) {
@@ -33,11 +33,11 @@ func Test_AddTwoNumbers(t *testing.T) {
 		
 		l2 := linkedList{first: ln2}
 		
-		l2.printList
+		l2.printList()
 		
 		list := AddTwoNumbers(l1, l2)
 		
-		list.printList
+		list.printList()
 }
 
 /**

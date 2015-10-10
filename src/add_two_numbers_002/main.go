@@ -24,6 +24,8 @@ func (l *linkedList) printList(){
 	}
 	
 	fmt.Println("=============================")
+	
+	return
 }
 
 

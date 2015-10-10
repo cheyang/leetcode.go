@@ -54,4 +54,6 @@ func AddTwoNumbers (listA, listB linkedList) linkedList{
 		nodeB = nodeB.next
 		
 	}
+	
+	return listC
 }

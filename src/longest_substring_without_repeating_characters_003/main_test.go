@@ -9,7 +9,7 @@ func TestlengthOfLongestSubstring1(t *testing.T) {
 	Convey("longest substring 1", t , func(){
 			
 				strs,length := lengthOfLongestSubstring("abcabcbb")
-				So(length, 3)
+				So(length, ShouldEqual, 3)
 				So(strs[0], ShouldEqual, "abc")
 				
 			})
@@ -21,7 +21,7 @@ func TestlengthOfLongestSubstring2(t *testing.T) {
 	Convey("longest substring 2", t , func(){
 			
 				strs,length := lengthOfLongestSubstring("bbbbb")
-				So(length, 1)
+				So(length, ShouldEqual, 1)
 				So(strs[0], ShouldEqual, "b")
 				
 			})

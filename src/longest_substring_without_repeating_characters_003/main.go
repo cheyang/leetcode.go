@@ -37,7 +37,7 @@ func lengthOfLongestSubstring(str string) (longestStrs []string, longestLength i
 
 					longestSubstringSlice[0] = substringCandidate
 				} else if substringCandidate.length == longestLength {
-					append(longestSubstringSlice, substringCandidate)
+					longestSubstringSlice = append(longestSubstringSlice, substringCandidate)
 				}
 
 				startPos += 1
@@ -59,10 +59,10 @@ func lengthOfLongestSubstring(str string) (longestStrs []string, longestLength i
 	
 	for i, longestSubstring := range longestSubstringSlice{
 		
-		tempStr := string(longestStrsstrSlice[longestSubstring.start:longestSubstring.end+1])
+		tempStr := string(longestSubstringSlice[longestSubstring.start:longestSubstring.end+1])
 		
 		if v, ok := encountered[tempStr]; ok == false{
-			append(longestStrs, tempStr)
+			longestStrs = append(longestStrs, tempStr)
 			encountered[tempStr] = true
 		}
 		

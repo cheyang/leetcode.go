@@ -18,7 +18,7 @@ func Test_AddTwoNumbers(t *testing.T) {
 			},
 		}
 		
-		l1 := LinkedList{first: ln1}
+		l1 := linkedList{first: ln1}
 		
 		ln2 := &linkedNode{
 			value: 5,
@@ -30,11 +30,11 @@ func Test_AddTwoNumbers(t *testing.T) {
 			},
 		}
 		
-		l2 := LinkedList{first: ln2}
+		l2 := linkedList{first: ln2}
 		
 		list := AddTwoNumbers(l1, l2)
 		
-		node = list.first
+		node := list.first
 		
 		So(node.value, ShouldEqual, 7)
 		So(node.next, ShouldNotBeNil)

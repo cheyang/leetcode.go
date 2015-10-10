@@ -29,11 +29,11 @@ func AddTwoNumbers (listA, listB linkedList) linkedList{
 		vB := 0
 		
 		if nodeA != nil{
-			vA := nodeA.value
+			vA = nodeA.value
 		}
 		
 		if nodeB != nil{
-			vB := nodeB.value
+			vB = nodeB.value
 		}
 		
 		valueC := (vA + vB + vCNext) % 10

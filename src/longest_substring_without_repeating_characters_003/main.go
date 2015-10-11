@@ -1,6 +1,8 @@
-package longest_substring_without_repeating_characters_003
+package main
 
-import ()
+import (
+	"fmt"
+	)
 
 type LongSubstring struct {
 	start, end, length int
@@ -17,6 +19,8 @@ func lengthOfLongestSubstring(str string) (longestStrs []string, longestLength i
 	var longestSubstringSlice []LongSubstring = make([]LongSubstring, len(str))
 
 	strSlice := []byte(str)
+	
+	fmt.Println(strSlice)
 
 	startPos := 0
 
@@ -30,6 +34,8 @@ func lengthOfLongestSubstring(str string) (longestStrs []string, longestLength i
 			if startPos <= v {
 
 				substringCandidate := LongSubstring{start: startPos, end: endPos, length: endPos - startPos + 1}
+				
+				fmt.Println(substringCandidate)
 
 				if substringCandidate.length > longestLength {
 
@@ -70,4 +76,10 @@ func lengthOfLongestSubstring(str string) (longestStrs []string, longestLength i
 
 	return longestStrs, longestLength
 
+}
+
+func main(){
+	fmt.Println( lengthOfLongestSubstring("abcabcbb"))
+	
+	fmt.Println( lengthOfLongestSubstring("bbbbb"))
 }

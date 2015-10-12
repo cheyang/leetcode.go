@@ -10,9 +10,9 @@ func Test_lengthOfLongestSubstring(t *testing.T) {
 			
 				strs,length := lengthOfLongestSubstring("abcabcbb")
 				So(length, ShouldEqual, 3)
-				So(strs[0], ShouldEqual, 'abc')
-				So(strs[1], ShouldEqual, 'bca')
-				So(strs[2], ShouldEqual, 'cab')
+				So(strs[0], ShouldEqual, "abc")
+				So(strs[1], ShouldEqual, "bca")
+				So(strs[2], ShouldEqual, "cab")
 				
 			})
 	
@@ -20,7 +20,7 @@ func Test_lengthOfLongestSubstring(t *testing.T) {
 			
 				strs,length := lengthOfLongestSubstring("bbbbb")
 				So(length, ShouldEqual, 1)
-				So(strs[0], ShouldEqual, 'b')
+				So(strs[0], ShouldEqual, "b")
 				
 			})
 		

@@ -5,7 +5,7 @@ import (
     . "github.com/smartystreets/goconvey/convey"
 )
 
-func TestlengthOfLongestSubstring1(t *testing.T) {
+func TestlengthOfLongestSubstring(t *testing.T) {
 	Convey("longest substring 1", t , func(){
 			
 				strs,length := lengthOfLongestSubstring("abcabcbb")
@@ -13,11 +13,7 @@ func TestlengthOfLongestSubstring1(t *testing.T) {
 				So(strs, ShouldEqual, "abcd")
 				
 			})
-		
 	
-}
-
-func TestlengthOfLongestSubstring2(t *testing.T) {
 	Convey("longest substring 2", t , func(){
 			
 				strs,length := lengthOfLongestSubstring("bbbbb")
@@ -26,6 +22,8 @@ func TestlengthOfLongestSubstring2(t *testing.T) {
 				
 			})
 		
+		
 	
 }
+
 

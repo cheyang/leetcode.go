@@ -4,24 +4,21 @@ import ()
 
 func RemoveElement(array []int, value int) int {
 
-	var currentLength int = len(array)
+	
 
-	var startPos = 0
+	var startPos, currentLen = 0
 
 
-	for startPos < currentLength {
+	for startPos < len(array) {
 
-		if array[startPos] == value {
+		if array[startPos] != value {
 
-			array[startPos] = array[currentLength-1]
+			currentLen ++
 
-			currentLength--
-
-			continue
 		}
 
 		startPos++
 	}
 
-	return currentLength
+	return currentLen
 }

@@ -11,7 +11,7 @@ func Test_RemoveElement(t *testing.T) {
 
 		length := RemoveElement([]int{2, 7, 11, 15}, 9)
 
-		So(length, ShouldEqual, 5)
+		So(length, ShouldEqual, 4)
 	})
 }
 

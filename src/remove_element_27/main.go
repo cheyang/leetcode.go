@@ -2,9 +2,9 @@ package remove_element_27
 
 import ()
 
-func RemoveElement(array []int, value int) int {
+func RemoveElement(array []int, value int) currentLen int {
 
-	var startPos, currentLen int = 0
+	var startPos int = 0
 
 	for startPos < len(array) {
 
@@ -17,5 +17,5 @@ func RemoveElement(array []int, value int) int {
 		startPos++
 	}
 
-	return currentLen
+	return 
 }

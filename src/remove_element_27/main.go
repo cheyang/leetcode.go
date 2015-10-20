@@ -2,7 +2,7 @@ package remove_element_27
 
 import ()
 
-func RemoveElement(array []int, value int) currentLen int {
+func RemoveElement(array []int, value int) (currentLen int) {
 
 	var startPos int = 0
 

@@ -8,7 +8,7 @@ func RemoveElement(array []int, value int) int {
 
 	var startPos = 0
 
-JUMP:
+
 	for startPos < currentLength {
 
 		if array[startPos] == value {
@@ -17,7 +17,7 @@ JUMP:
 
 			currentLength--
 
-			goto JUMP
+			continue
 		}
 
 		startPos++

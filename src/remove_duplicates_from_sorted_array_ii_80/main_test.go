@@ -7,10 +7,22 @@ import (
 
 func Test_RemoveDuplicates(t *testing.T) {
 		Convey("remove elements", t, func() {
+				
+				Convey("remove elements with duplicate data", func(){
+						length := RemoveDuplicates([]int{1,1,1,2,2,3})
 
-		length := RemoveDuplicates([]int{1,1,1,2,2,3})
+						So(length, ShouldEqual, 3)
+						
+						})
+				
+				Convey("remove elements without duplicate data", func(){
+						length := RemoveDuplicates([]int{1,2,3})
 
-		So(length, ShouldEqual, 5)
+						So(length, ShouldEqual, 3)
+						
+						})
+
+		
 	})
 }
 

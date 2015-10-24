@@ -8,8 +8,8 @@ import (
 
 func Test_PlusOne(t *testing.T) {
 
-	convey("Plus One", t, func() {
-		convey("Plus One without carry-over", func() {
+	Convey("Plus One", t, func() {
+		Convey("Plus One without carry-over", func() {
 
 			result := PlusOne([]int{1, 2, 3, 4, 5})
 
@@ -22,7 +22,7 @@ func Test_PlusOne(t *testing.T) {
 			So(expect_data[4], ShouldEqual, 6)
 		})
 
-		convey("Plus One with carry-over", func() {
+		Convey("Plus One with carry-over", func() {
 
 			result := PlusOne([]int{9, 9, 9, 9})
 

@@ -26,7 +26,7 @@ func Test_PlusOne(t *testing.T) {
 
 			result := PlusOne([]int{9, 9, 9, 9})
 
-//			expect_data := []int{1, 0, 0, 0, 0}
+			expect_data := []int{1, 0, 0, 0, 0}
 
 			So(expect_data[0], ShouldEqual, result[0])
 			So(expect_data[1], ShouldEqual, result[1])

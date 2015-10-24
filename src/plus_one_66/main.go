@@ -1,12 +1,17 @@
-package plus_one_66
+package main
 
-import ()
+import (
+	
+	)
+
 
 func PlusOne(input []int) []int {
 
 	carry := 1
 
-	var output []int = make([]int, len(input)+1)
+	var output []int = make([]int, len(input) + 1)
+	
+	copy(output[1:], input)
 
 	for i := len(input) - 1; i > -1; i-- {
 
@@ -17,6 +22,7 @@ func PlusOne(input []int) []int {
 			output[i+1] = value - 10
 		} else {
 			carry = 0
+			output[i+1] = value
 			break
 		}
 	}
@@ -26,7 +32,7 @@ func PlusOne(input []int) []int {
 	if carry == 1 {
 		output[0] = 1
 
-		result = output
+		result = output[:]
 	} else {
 		result = output[1:]
 	}

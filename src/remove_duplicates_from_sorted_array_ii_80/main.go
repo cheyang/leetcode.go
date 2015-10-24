@@ -18,12 +18,13 @@ func RemoveDuplicates(array []int)(length int){
 	for pos < len(array){
 		
 		if v, ok := duplicateMap[array[pos]]; ok{
-			if v <= 2{
-				length ++
-			}
 			
 			v++
 			
+			if v <= 2{
+				length ++
+			}
+					
 			duplicateMap[array[pos]] = v
 			
 		}else{

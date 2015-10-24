@@ -28,6 +28,7 @@ func RemoveDuplicates(array []int)(length int){
 			
 		}else{
 			duplicateMap[array[pos]] = 1
+			length ++
 		}
 		
 		

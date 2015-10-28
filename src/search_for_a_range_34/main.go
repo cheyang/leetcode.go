@@ -16,7 +16,7 @@ func SearchRange(array []int, target int) (result []int){
 	
 	result = []int{-1, -1}
 	
-	for mid>start || mid<end {
+	for mid>start && mid<end {
 		
 		if array[mid] > target{
 			

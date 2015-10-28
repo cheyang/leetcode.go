@@ -23,7 +23,7 @@ func Test_SearchRange(t *testing.T) {
 					
 					Convey("Search Range 3", func(){
 							result := SearchRange([]int{5, 7, 7, 8, 8, 10}, 7)
-							So(result, ShouldResemble, []int{0,-1})
+							So(result, ShouldResemble, []int{1,2})
 							
 							})
 				})

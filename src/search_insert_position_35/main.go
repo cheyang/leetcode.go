@@ -38,8 +38,13 @@ func SearchInsertTarget(nums []int, target int) (pos int) {
 
 		mid = (start + end) / 2
 	}
-
+	
+	if nums[start] < target{
+		pos = start + 1
+	}else{
+		pos = start
+	}
 	
 
-	return start
+	return pos
 }

@@ -15,7 +15,8 @@ func SearchInsertTarget(nums []int, target int) (pos int) {
 	end := len(nums) - 1
 	
 	i := 0
-
+	
+	loop:
 	for end-start >= 0 {
 		
 		fmt.Println(i, "start:", start, ", end:", end, ", mid:", mid)
@@ -23,16 +24,16 @@ func SearchInsertTarget(nums []int, target int) (pos int) {
 		switch {
 		case nums[mid] == target:
 			pos = mid
-			break
+			break loop
 		case target > nums[end]:
 			pos = end + 1
-			break
+			break loop
 		case target == nums[end]:
 			pos = end
-			break
+			break loop
 		case target <= nums[start]:
 			pos = start
-			break
+			break loop
 	    default:
 	    	fmt.Println("do nothing")
 		}

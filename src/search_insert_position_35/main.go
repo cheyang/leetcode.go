@@ -14,15 +14,6 @@ func SearchInsertTarget(nums []int, target int) (pos int) {
 
 	for end-start >= 0 {
 
-		if nums[mid] == target {
-			pos = mid
-			break
-		}
-
-		if target > nums[end] {
-			pos = end
-		}
-
 		switch {
 		case nums[mid] == target:
 			pos = mid

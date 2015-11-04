@@ -1,6 +1,8 @@
 package search_insert_position_35
 
-import ()
+import (
+	"fmt"
+	)
 
 func SearchInsertTarget(nums []int, target int) (pos int) {
 
@@ -11,8 +13,12 @@ func SearchInsertTarget(nums []int, target int) (pos int) {
 	start := 0
 
 	end := len(nums) - 1
+	
+	i := 0
 
 	for end-start >= 0 {
+		
+		fmt.Println(i, "start:", start, ", end:", end)
 
 		switch {
 		case nums[mid] == target:

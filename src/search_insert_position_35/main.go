@@ -17,7 +17,7 @@ func SearchInsertTarget(nums []int, target int) (pos int) {
 	i := 0
 	
 	loop:
-	for end-start >= 1 {
+	for end-start > 1 {
 		
 		fmt.Println(i, "start:", start, ", end:", end, ", mid:", mid, "target:", target)
 

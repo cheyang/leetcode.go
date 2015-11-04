@@ -27,6 +27,7 @@ func SearchInsertTarget(nums []int, target int) (pos int) {
 		case target <= nums[start]:
 			pos = start
 			break
+	    default:
 		}
 
 		if nums[mid] > target {

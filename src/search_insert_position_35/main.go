@@ -12,7 +12,7 @@ func SearchInsertTarget(nums []int, target int) (pos int) {
 
 	end := len(nums) - 1
 
-	for end-start > 0 {
+	for end-start >= 0 {
 
 		if nums[mid] == target {
 			pos = mid

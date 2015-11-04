@@ -18,11 +18,11 @@ func Test_SearchInsertTarget(t *testing.T) {
 					
 					})
 			
-			Convey("compare [1,3,5,6], 5 → 2", func(){
+			Convey("compare [1,3,5,6], 3 → 2", func(){
 					
 					pos := SearchInsertTarget([]int{1,3,5,6}, 5)
 					
-					So(pos, ShouldEqual, 2)
+					So(pos, ShouldEqual, 1)
 					
 					})
 			

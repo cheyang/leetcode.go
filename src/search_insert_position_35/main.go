@@ -19,7 +19,7 @@ func SearchInsertTarget(nums []int, target int) (pos int) {
 	loop:
 	for end-start >= 0 {
 		
-		fmt.Println(i, "start:", start, ", end:", end, ", mid:", mid)
+		fmt.Println(i, "start:", start, ", end:", end, ", mid:", mid, "target:", target)
 
 		switch {
 		case nums[mid] == target:

@@ -1,7 +1,7 @@
 package search_insert_position_35
 
 import (
-	"fmt"
+//	"fmt"
 	)
 
 func SearchInsertTarget(nums []int, target int) (pos int) {
@@ -21,7 +21,7 @@ func SearchInsertTarget(nums []int, target int) (pos int) {
 	
 	for end > start {
 		
-		fmt.Println(i, "start:", start, ",value:", nums[start], ", end:", end, ",value:",nums[end],", mid:", mid,",value:",nums[mid], "target:", target)
+	//	fmt.Println(i, "start:", start, ",value:", nums[start], ", end:", end, ",value:",nums[end],", mid:", mid,",value:",nums[mid], "target:", target)
 		
 		if nums[mid] == target{
 			return mid
